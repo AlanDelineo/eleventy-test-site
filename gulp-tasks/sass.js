@@ -18,7 +18,7 @@ const calculateOutput = ({history}) => {
   let response = './dist/css';
 
   // Get everything after the last slash
-  const sourceFileName = /[^\\]*$/.exec(history[0])[0];
+  const sourceFileName = /[^/]*$/.exec(history[0])[0];
 
   // If this is critical CSS though, we want it to go
   // to the _includes directory, so nunjucks can include it
